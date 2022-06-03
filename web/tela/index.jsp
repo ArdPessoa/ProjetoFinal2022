@@ -48,7 +48,7 @@
             <!--Aqui é o menu da parte de cima da página web-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="empresa.jsp"><h5>Empresa</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
@@ -58,9 +58,7 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="planos.jsp"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a  class="nav-link" href="agendamento.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
-                    </li>
+                 
                     <li class="nav-item ">
                         <a class="nav-link" href="faleconosco.jsp"><h5>Fale Conosco</h5> <span class="sr-only">(current)</span></a>
                     </li>

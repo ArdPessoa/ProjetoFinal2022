@@ -77,9 +77,7 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="planos.jsp"><h5>Plano</h5> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
-                        <a  class="nav-link" href="agendamento.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
-                    </li>
+                 
                     <li class="nav-item ">
                         <a class="nav-link" href="faleconosco.jsp"><h5>Contato</h5> <span class="sr-only">(current)</span></a>
                     </li>

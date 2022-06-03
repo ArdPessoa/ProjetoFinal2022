@@ -78,7 +78,7 @@
             <!--Aqui é o menu da parte de cima da página web-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="listarusuario.jsp"><h5>Listar Usuário</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">

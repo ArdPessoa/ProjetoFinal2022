@@ -43,13 +43,13 @@
             <!--Aqui é o menu da parte de cima da página web-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="<%= caminho%>cliente/empresac.jsp"><h5>Empresa</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                         <a  class="nav-link" href="<%= caminho%>cliente/atividadesc.jsp"><h5>Atividade</h5> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a  class="nav-link" href="<%= caminho%>cliente/planosc.jsp"><h5>Plano</h5> <span class="sr-only">(current)</span></a>
                     </li> 
                     <li class="nav-item ">
@@ -75,9 +75,17 @@
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-6">
-                    <h2><center>Plano</center></h2>
+                   <h2><center>Plano</center></h2>
+                    <center><p><h3>Planos e promoções imperdivéis!</h3><p/>
+                        <h5><p>Treine todos os dias em sua unidade sem taxa de cancelamento e sem taxa de anuidade.</h5>
+                        O cancelamento deve ser avisado com no mínimo 30 dias de antecedência do próximo vencimento.<br>
+                        Plano Gold Sem Adesão válido somente no site.
+                        O acesso do (a) convidado (a) só é liberado na unidade de matrícula.
+                    
+                  
+                    </center>
                     <p style="text-align: justify;">
-                        <img class="user" src="<%=caminho%>img/planoeditado.png" width="90px" alt="imagem"> <span><%= responsavel%></span>
+                    <center><img src="<%= caminho%>img/planoeditado.png" alt="imagem"></center> 
                     </p> 
                 </div>
                 <div class="col-3"></div>

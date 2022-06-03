@@ -42,7 +42,7 @@
             <!--Aqui é o menu da parte de cima da página web-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                     <li class="nav-item active">
+                     <li class="nav-item">
                         <a class="nav-link" href="<%= caminho%>cliente/empresac.jsp"><h5>Empresa</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
@@ -54,7 +54,7 @@
                     <li class="nav-item ">
                         <a  class="nav-link" href="<%= caminho%>cliente/telaagendamentoc.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a  class="nav-link" href="<%= caminho%>cliente/faleconoscoc.jsp"><h5>Fale Conosco</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
