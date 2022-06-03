@@ -71,12 +71,14 @@ public class ServicoServlet extends HttpServlet {
             String modalidade = request.getParameter("modalidade");
             double preco = Double.parseDouble(request.getParameter("preco"));
             String descricao = request.getParameter("descricao");
+            int vagas = Integer.parseInt(request.getParameter("vagas"));
 
             Servico ser = new Servico();
             ser.setId(idservico);
             ser.setModalidade(modalidade);
             ser.setPreco(preco);
             ser.setDescricao(descricao);
+            ser.setVagas(vagas);
 
             boolean atualizou = ser.Atualizar();
 
@@ -111,12 +113,14 @@ public class ServicoServlet extends HttpServlet {
             String modalidade = request.getParameter("modalidade");
             double preco = Double.parseDouble(request.getParameter("preco"));
             String descricao = request.getParameter("descricao");
+             int vagas = Integer.parseInt(request.getParameter("vagas"));
 
             Servico ser = new Servico();
 //            ser.setId(idservico);
             ser.setModalidade(modalidade);
             ser.setPreco(preco);
             ser.setDescricao(descricao);
+             ser.setVagas(vagas);
 
             long novoId = ser.Cadastrar();
             //cadastrou == true 

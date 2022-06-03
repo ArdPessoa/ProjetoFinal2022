@@ -56,7 +56,7 @@
                         <a class="nav-link" href="<%= caminho%>cliente/atividadesc.jsp"><h5>Atividade</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<%= caminho%>cliente/planosc.jsp"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="<%= caminho%>cliente/telaagendamentoc.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>

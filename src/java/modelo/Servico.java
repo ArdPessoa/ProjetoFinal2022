@@ -11,11 +11,26 @@ import util.BancoDados;
 
 public class Servico {
 
+    /**
+     * @return the vagas
+     */
+    public int getVagas() {
+        return vagas;
+    }
+
+    /**
+     * @param vagas the vagas to set
+     */
+    public void setVagas(int vagas) {
+        this.vagas = vagas;
+    }
+
     private long id;
     private double preco;
     private String modalidade;
     private String descricao;
     private Usuario resp;
+    private int vagas;
 
     /**
      * @return the resp
@@ -68,13 +83,14 @@ public class Servico {
 
             Connection conn = BancoDados.getConexao();
             String sql = "INSERT INTO tb_cadservico";
-            sql += "(preco, modalidade, descricao)";
-            sql += " VALUES (?,?,?);";
+            sql += "(preco, modalidade, descricao, vagas)";
+            sql += " VALUES (?,?,?,?);";
             PreparedStatement ps = conn.prepareStatement(sql,
                     Statement.RETURN_GENERATED_KEYS);
             ps.setDouble(1, this.getPreco());
             ps.setString(2, this.getModalidade());
             ps.setString(3, this.getDescricao());
+            ps.setInt(4, this.getVagas());
             int linhasafetadas = ps.executeUpdate();
             if (linhasafetadas > 0) {
                 final ResultSet rs = ps.getGeneratedKeys();
@@ -113,6 +129,7 @@ public class Servico {
                 s.setPreco(rs.getDouble("preco"));
                 s.setModalidade(rs.getString("modalidade"));
                 s.setDescricao(rs.getString("descricao"));
+                s.setVagas(rs.getInt("vagas"));
                 lista.add(s);
             }
             return lista;
@@ -141,6 +158,7 @@ public class Servico {
                 this.setPreco(rs.getDouble("preco"));
                 this.setModalidade(rs.getString("modalidade"));
                 this.setDescricao(rs.getString("descricao"));
+                this.setVagas(rs.getInt("vagas"));
 
                 return true;
             } else {
@@ -159,13 +177,15 @@ public class Servico {
             String sql = "UPDATE bdacademia.tb_cadservico "
                     + " SET preco = ?, "
                     + " modalidade = ?, "
-                    + " descricao = ? "
+                    + " descricao = ?, "
+                    + " vagas = ? "
                     + " WHERE id = ?;";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setDouble(1, this.getPreco());
             ps.setString(2, this.getModalidade());
             ps.setString(3, this.getDescricao());
-            ps.setLong(4, this.getId());
+            ps.setInt(4, this.getVagas());
+            ps.setLong(5, this.getId());
             int linhasafetadas = ps.executeUpdate();
             if (linhasafetadas > 0) {
                 System.out.println("atualizou!");

@@ -7,7 +7,7 @@
 <%@page import="modelo.Usuario"%>
 
 <%
-    String acao = "cadastrar", idservico = "", preco = "", responsavel = "", modalidade = "", descricao = "", caminhoacao = "../ServicoServlet", dir = "../";
+    String acao = "cadastrar", idservico = "", preco = "", responsavel = "", modalidade = "", descricao = "", vagas = "", caminhoacao = "../ServicoServlet", dir = "../";
     String caminho = "../";
     
     session = request.getSession();
@@ -34,7 +34,7 @@
                 preco = String.valueOf(s.getPreco());
                 modalidade = s.getModalidade();
                 descricao = s.getDescricao();
-               
+                vagas = s.getVagas();
             }
 
         }
@@ -117,6 +117,11 @@
                                 <label for="">Preço:</label>
                                 <input size="30"  value="<%=preco%>"
                                        type="text" class="form-control" name="preco" />
+                            </div>
+                                       <div class="col">
+                                <label for="">Vagas:</label>
+                                <input size="30"  value="<%=vagas%>"
+                                       type="number" class="form-control" name="vagas" />
                             </div>
                         </div>
                         <label for="">Descrição:</label>
