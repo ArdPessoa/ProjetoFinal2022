@@ -7,7 +7,7 @@
     String responsavel = "", caminho="../";
     if (request.getAttribute("responsavel") != null) {
         responsavel = "Olá,"+ String.valueOf(request.getAttribute("responsavel"));
-        caminho="";
+        caminho="../";
     }
 
 %>   
@@ -44,19 +44,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<%= caminho%>cliente/empresac.jsp"><h5>Empresa</h5> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="empresa.jsp"><h5>Empresa</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a  class="nav-link" href="<%= caminho%>cliente/atividadesc.jsp"><h5>Atividade</h5> <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link" href="atividades.jsp"><h5>Atividade</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a  class="nav-link" href="<%= caminho%>cliente/planosc.jsp"><h5>Plano</h5> <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link" href="planos.jsp"><h5>Plano</h5> <span class="sr-only">(current)</span></a>
                     </li> 
                     <li class="nav-item ">
-                        <a  class="nav-link" href="<%= caminho%>cliente/telaagendamentoc.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link" href="agendamento.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a  class="nav-link" href="<%= caminho%>cliente/faleconoscoc.jsp"><h5>Fale Conosco</h5> <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link" href="faleconosco.jsp"><h5>Fale Conosco</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <img class="user" src="<%=caminho%>img/user(4).png" width="50px" alt="imagem"> <span><%= responsavel%></span>

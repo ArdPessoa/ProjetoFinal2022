@@ -4,14 +4,23 @@
     Author     : sala305b
 --%>
 
+<%@page import="modelo.Usuario"%>
 <%@page import="java.util.List"%>
 <%@page import="modelo.Agendamento"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    String iduser = String.valueOf(
+    String iduser  = String.valueOf(
             request.getAttribute("iduser"));
     List<Agendamento> agendamentos = new Agendamento().ListarTodos();
+    
+       session = request.getSession();
+    Usuario user = (Usuario) session.getAttribute("user");
+
+    String responsavel = "", caminho = "../";
+
+        responsavel = "Olá," + user.getResponsavel();
+     
 %>
 <!DOCTYPE html>
 <html>

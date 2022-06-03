@@ -3,12 +3,12 @@
     Created on : 18/04/2022, 09:39:04
     Author     : sala305b
 --%>
+<%@page import="modelo.Usuario"%>
 <%
     String responsavel = "", caminho="../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá,"+ String.valueOf(request.getAttribute("responsavel"));
-        caminho="";
-    }
+    session = request.getSession();
+    Usuario user = (Usuario) session.getAttribute("user");
+    responsavel = "Olá," + user.getResponsavel();
     
        
 %>  
@@ -49,7 +49,7 @@
                         <a  class="nav-link" href="<%= caminho%>cliente/atividadesc.jsp"><h5>Atividade</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a  class="nav-link" href="#"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
+                        <a  class="nav-link" href="<%=caminho%>cliente/planosc.jsp"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                         <a  class="nav-link" href="<%= caminho%>cliente/telaagendamentoc.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>

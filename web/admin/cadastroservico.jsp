@@ -34,7 +34,7 @@
                 preco = String.valueOf(s.getPreco());
                 modalidade = s.getModalidade();
                 descricao = s.getDescricao();
-                vagas = s.getVagas();
+                vagas = String.valueOf(s.getVagas());
             }
 
         }

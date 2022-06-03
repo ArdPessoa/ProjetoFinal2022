@@ -3,12 +3,12 @@
     Created on : 30/03/2022, 10:34:41
     Author     : Sala305b
 --%>
+<%@page import="modelo.Usuario"%>
 <%
     String responsavel = "", caminho="../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá,"+ String.valueOf(request.getAttribute("responsavel"));
-        caminho="";
-    }
+    session = request.getSession();
+    Usuario user = (Usuario) session.getAttribute("user");
+    responsavel = "Olá," + user.getResponsavel();
 
 %>   
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -77,7 +77,7 @@
                 <div class="col-6">
                     <h2><center>Plano</center></h2>
                     <p style="text-align: justify;">
-                        <img class="user" src="<%=caminho%>planoeditado.png" width="90px" alt="imagem"> <span><%= responsavel%></span>
+                        <img class="user" src="<%=caminho%>img/planoeditado.png" width="90px" alt="imagem"> <span><%= responsavel%></span>
                     </p> 
                 </div>
                 <div class="col-3"></div>

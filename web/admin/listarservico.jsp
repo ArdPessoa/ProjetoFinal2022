@@ -77,6 +77,7 @@
                 <td>Preço</td>
                 <td>Modalidade</td>
                 <td>Descrição</td>
+                <td>Vagas</td>
                 <td>Ações</td>
 
             </tr>           
@@ -98,6 +99,10 @@
 
                     out.print("<td>");
                     out.print(p.getDescricao());
+                    out.print("</td>");
+                    
+                    out.print("<td>");
+                    out.print(p.getVagas());
                     out.print("</td>");
 
 

@@ -44,7 +44,10 @@
                         <a class="nav-link" href="<%= caminho%>tela/atividades.jsp"><h5>Atividades</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<%=caminho%>tela/planos.jsp"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a  class="nav-link" href="tela/agendamento.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="<%= caminho%>tela/faleconosco.jsp"><h5>Fale Conosco</h5> <span class="sr-only">(current)</span></a>

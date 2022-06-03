@@ -3,12 +3,12 @@
     Created on : 30/03/2022, 10:34:41
     Author     : Sala305b
 --%>
+<%@page import="modelo.Usuario"%>
 <%
     String responsavel = "", caminho = "../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá," + String.valueOf(request.getAttribute("responsavel"));
-        caminho = "";
-    }
+    session = request.getSession();
+    Usuario user = (Usuario) session.getAttribute("user");
+    responsavel = "Olá," + user.getResponsavel();
 
 %>    
 
