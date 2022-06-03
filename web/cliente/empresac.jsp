@@ -5,8 +5,8 @@
 --%>
 <%@page import="modelo.Usuario"%>
 <%
-    String responsavel = "", caminho="../";
-     session = request.getSession();
+    String responsavel = "", caminho = "../";
+    session = request.getSession();
     Usuario user = (Usuario) session.getAttribute("user");
     responsavel = "Olá," + user.getResponsavel();
 
@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="../css/bootstrap.css" >
         <link rel="stylesheet" href="../css/estiloempresacliente.css" >
 
-       
+
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
@@ -63,7 +63,7 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a id="btn" class="btn btn-warning my-2 my-sm-0" href="loginmainc.jsp">Entrar</a>
+                    <a class="btn btn-danger my-2 my-sm-0" href="../tela/index.jsp">Sair</a>
                 </form>
             </div>
 

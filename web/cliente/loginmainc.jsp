@@ -58,8 +58,8 @@
 
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-warning my-2 my-sm-0" href="loginmainc.jsp">Entrar</a>
+               <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-danger my-2 my-sm-0" href="../tela/index.jsp">Sair</a>
                 </form>
             </div>
 

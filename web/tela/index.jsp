@@ -5,10 +5,7 @@
 --%>
 <%
     String responsavel = "", caminho = "../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá," + String.valueOf(request.getAttribute("responsavel"));
-        caminho = "";
-    }
+   
 
 %>    
 

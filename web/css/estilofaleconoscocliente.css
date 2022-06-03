@@ -125,6 +125,8 @@ h2.fc {
     margin-right: 10px;
 
 }
-#btn{
-    margin-left:100px; 
+.btn{
+    margin-left: 100px; 
+      z-index: 10;
+      text-align: center;
 }

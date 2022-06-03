@@ -43,7 +43,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sistema de Cadastro</title>
+        <title>Sistema de Cadastro </title>
 
         <!-- Required meta tags -->
         <meta cha-rset="utf-8">

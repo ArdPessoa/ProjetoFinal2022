@@ -54,10 +54,10 @@
                     <li class="nav-item ">
                         <a class="nav-link" href="<%= caminho%>cliente/atividadesc.jsp"><h5>Atividades</h5> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="<%= caminho%>cliente/planosc.jsp"><h5>Planos</h5> <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item ">
+                    <li class="nav-item active">
                         <a class="nav-link" href="<%= caminho%>cliente/telaagendamentoc.jsp"><h5>Agendamento</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item ">
@@ -69,20 +69,20 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-warning my-2 my-sm-0" href="loginmainc.jsp">Entrar</a>
+                    <a  class="btn btn-danger my-2 my-sm-0" href="../tela/index.jsp">Sair</a>
                 </form>
             </div>
 
         </nav>  
 
 
-                        <div class="container-fluid" style="">
-
-<div class="imgfundo">   
+ <div class="container-fluid">
+     <div class="row">
+<div class="imgfundoagend">   
     <img src="<%=caminho%>img/peso.png" alt="imagem"/>
-        </div>
-                           
-
+     </div>
+     </div>
+     <d67iv class="Meio">
                 <div class="row">
                     <div class="col-12">
                         <h3>Selecione a atividade</h3> &nbsp;
@@ -133,27 +133,11 @@
                     <a class="btn btn-warning my-2 my-sm-0" href="" style="font-size: 25px;">Agendar</a>
                 </form>
                 
-                
+                     
+            </div> 
             </div>
-                
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+           
+     
                 <!--Aqui é o roda pé e as informaçoes do roda pé-->
                 <div class="row" style="margin-top:25%;">
 

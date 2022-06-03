@@ -25,12 +25,9 @@ a.nav-link{
     margin-right: 105px;
     padding-right:  80px;
     padding-left:  130px;
-
 }
 .img{
     padding-right: 10px;
-
-
 }
 .imgfundo{
     position: absolute;
@@ -156,10 +153,10 @@ img.E{
     font-size: 26px;            
     text-align: center;
 }
-#btn{
-    margin-left: 100px;
+.btn{
+    margin-left: 100px; 
+      z-index: 10;
+      text-align: center;
 }
-
-
 
 

@@ -98,4 +98,6 @@ img.E{
 }
 .btn{
     margin-left: 100px; 
+      z-index: 10;
+      text-align: center;
 }

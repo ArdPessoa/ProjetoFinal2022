@@ -5,10 +5,7 @@
 --%>
 <%
     String responsavel = "", caminho="../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá,"+ String.valueOf(request.getAttribute("responsavel"));
-        caminho="";
-    }
+   
 
 %>   
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

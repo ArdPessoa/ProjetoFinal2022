@@ -27,18 +27,19 @@ a.nav-link{
 }
 img.user{
     padding-right: 10px;
-
-
 }
-.imgfundo img{
-    position: absolute;
-    margin-right: 100px;
+.imgfundoagend img{
+     position: absolute;
     width: 100%;
     height:100%; 
     display: block;
-  
     z-index: 0; 
 }
+.Meio{
+    text-align: center;
+   
+}
+
 img.C{
     position: absolute;
     margin-left: 1000px;

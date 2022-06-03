@@ -112,7 +112,7 @@ h11 {
 }*/
   body{
             font-family: "sans-serif";
-            color:black;
+            color:white;
         }
         a{
             text-decoration: none;
@@ -125,6 +125,7 @@ h11 {
         .navbar-brand{
             padding-right:  50px;
         }
+        
         .img{
             padding-right: 10px;
 

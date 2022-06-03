@@ -5,10 +5,7 @@
 --%>
 <%
     String responsavel = "", caminho="../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá,"+ String.valueOf(request.getAttribute("responsavel"));
-     
-    }
+    
 
 %>   
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -16,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Empresa</title>
+        <title>Planos</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="../css/bootstrap.css" >
         <link rel="stylesheet" href="../css/estiloindex.css" >
