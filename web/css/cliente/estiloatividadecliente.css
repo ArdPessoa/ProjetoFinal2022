@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 body{
-    font-family: "sans-serif";
+    font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
     color:white;
     background-color: black;
 }
@@ -67,7 +67,7 @@ img.E{
     font-weight: bold;
     color:#333;
     text-align: center;
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
     font-size: 23px;
     margin-top: 228px;
     margin-left:  935px;
@@ -78,18 +78,18 @@ img.E{
 .h2P {
     margin-top:760px; 
     color: white;
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
 }
 .table{
     background-color:	#808080; 
 }
 .h2In{
     color: white; 
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
 }
 .p{
     color: white; 
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
 
     word-wrap: break-word;
     width:540px;

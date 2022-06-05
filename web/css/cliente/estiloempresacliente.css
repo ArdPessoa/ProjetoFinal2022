@@ -2,36 +2,19 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
-*/
-/* 
+
+ 
     Created on : 05/04/2022, 11:05:43
     Author     : sala306b
 */
 
-/* Made with love by Mutiullah Samim*/
 
-@import url('https://fonts.googleapis.com/css?family=Numans');
-
-html,body{
-    background-image: url('https://wallpaperaccess.com/full/1097431.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
-}
 
 .container{
     height: 100%;
     align-content: center;
 }
 
-.card{
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
-}
 
 .social_icon span{
     font-size: 60px;
@@ -110,6 +93,31 @@ h11 {
 .panel-heading{
     font-size:150%;
 }
-#text{
+body{
+    font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+    color:black;
+}
+a{
+    text-decoration: none;
     color: white;
+}
+a.nav-link{
+    margin-right:100px;
+
+}
+.navbar-brand{
+    margin-right: 105px;
+    padding-right:  80px;
+    padding-left:  130px;
+
+}
+.img{
+    padding-right: 10px;
+
+}
+
+.btn{
+    margin-left: 100px; 
+      z-index: 10;
+      text-align: center;
 }

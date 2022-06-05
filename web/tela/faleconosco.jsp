@@ -3,13 +3,39 @@
     Created on : 18/04/2022, 09:39:04
     Author     : sala305b
 --%>
+<%@page import="modelo.FaleConosco"%>
 <%
-    String responsavel = "", caminho="../";
-    if (request.getAttribute("responsavel") != null) {
-        responsavel = "Olá,"+ String.valueOf(request.getAttribute("responsavel"));
-        caminho="";
-    }
+ String acao = "cadastrar", idfalec = "", nome = "", email = "",ddd = "",telefone = "",uf = "",cidade = "",descricao ="", caminhoacao = "../FaleconoscoServlet", caminho = "../";
 
+   FaleConosco fc = new FaleConosco();
+    if (request.getParameter("acao") != null) {
+
+        if (request.getParameter("acao").equals("editar")) {
+
+            caminho = "../";
+
+            idfalec = request.getParameter("idfalec");
+            caminhoacao = "../ServicoServlet";
+            boolean achou = fc.BuscarPorId(idfalec);
+            if (!achou) {
+                out.print("<script>"
+                        + "window.alert('Cliente não Encontrado');"
+                        + "</script>");
+            } else {
+                acao = "editar";
+               idfalec = String.valueOf(fc.getId());
+               nome = fc.getNome();
+               email = fc.getEmail();
+               ddd = fc.getDdd();
+              telefone  =fc.getTelefone();
+              uf = fc.getUf();
+              cidade = fc.getCidade();
+               descricao = fc.getDescricao();
+            }
+
+        }
+
+    }
 %>  
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,8 +45,8 @@
         <title>Fale Conosco</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="<%= caminho %>css/bootstrap.css" >
-        <link rel="stylesheet" href="<%= caminho %>css/estilofaleconosco.css" >
-        <link rel="stylesheet" href="<%= caminho %>css/estiloindex.css" >
+        <link rel="stylesheet" href="<%= caminho %>css/padrao/estilofaleconosco.css" >
+<!--        <link rel="stylesheet" href="css/padrao/estiloindex.css" >-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -54,12 +80,12 @@
                         <a class="nav-link" href="faleconosco.jsp"><h5>Fale Conosco</h5> <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                         <img class="user" src="<%= caminho%>img/user(4).png" width="50px" alt="imagem"> <span><%= responsavel %></span>
+                         <img class="user" src="<%= caminho%>img/user(4).png" width="50px" alt="imagem"> <span></span>
 
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="btn btn-warning my-2 my-sm-0" href="loginmain.jsp">Entrar</a>
+                    <a id="btnEntrar" class="btn btn-warning my-2 my-sm-0" href="loginmain.jsp">Entrar</a>
                 </form>
             </div>
 
@@ -78,12 +104,12 @@
                 </div>
                 <div class="col-6">
                     <div class="col-auto">
-                        <label class="sr-only" for="inlineFormInputGroup">Username</label><p>
+                        <label class="sr-only" for="inlineFormInputGroup">Nome Completo</label><p>
                         <div class="input-group mb-2">
                             <label class="icones">
                                 <i class="fas fa-user"></i>
                             </label>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                            <input type="text" value="<%=nome%>" name="nome" class="form-control" id="inlineFormInputGroup" placeholder="Nome Completo">
                         </div>
                     </div>
                 </div>
@@ -98,12 +124,12 @@
                 </div>
                 <div class="col-6">
                     <div class="col-auto">
-                        <label class="sr-only" for="inlineFormInputGroup">Email</label><p>
+                        <label class="sr-only" for="inlineFormInputGroup">E-mail</label><p>
                         <div class="input-group mb-2">
                             <label class="icone2">
                                 <i class="fas fa-envelope"></i>
                             </label>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                            <input type="text" value="<%=email%>" name="email" class="form-control" id="inlineFormInputGroup" placeholder="E-mail">
                         </div>
                     </div>
 
@@ -119,12 +145,12 @@
                 </div>
                 <div class="col-6">
                     <div class="col-auto">
-                        <label class="sr-only"   for="inlineFormInputGroup">Tel</label><p>
+                        <label class="sr-only"   for="inlineFormInputGroup">Telefone/Celular</label><p>
                         <div class="input-group mb-2">
                             <label class="icone3">
                                 <i class="fas fa-phone"></i>
                             </label>
-                            <input type="text" id="txtDddTelefone" class="form-control" id="inlineFormInputGroup" placeholder="Tel">
+                            <input type="text" value="<%=ddd + telefone%>" name="dddtelefone" id="txtDddTelefone" class="form-control" id="inlineFormInputGroup" placeholder="Tel">
                         </div>
                     </div>
 
@@ -147,19 +173,67 @@
 
                                 <div class="col-1"> <i class="fas fa-map-marker-alt"></i></div>
                                 <div class="col-5">
-                                    <select class="form-control">
-                                        <option>Selecione</option>
-                                        <option>ES</option>
-                                        <option>SP</option>
-                                        <option>RJ</option>
-                                        <option>MG</option>
-                                        <option>PB</option>
-                                        <option>AM</option>
-                                        <option>SC</option>
+                                    <select name="uf" class="form-control">
+                                         <option <%= uf.equals("") ? "selected" : ""%>
+                                value="">Selecione</option>
+                            <option <%= uf.equals("AC") ? "selected" : ""%>
+                                value="AC">Acre</option>
+                            <option <%= uf.equals("AL") ? "selected" : ""%>
+                                value="AL">Alagoas</option>
+                            <option <%= uf.equals("AP") ? "selected" : ""%>
+                                value="AP">Amapá</option>
+                            <option <%= uf.equals("AM") ? "selected" : ""%>
+                                value="AM">Amazonas</option>
+                            <option <%= uf.equals("BA") ? "selected" : ""%>
+                                value="BA">Bahia</option>
+                            <option <%= uf.equals("CE") ? "selected" : ""%>
+                                value="CE">Ceará</option>
+                            <option <%= uf.equals("DF") ? "selected" : ""%>
+                                value="DF">Distrito Federal</option>
+                            <option <%= uf.equals("ES") ? "selected" : ""%>
+                                value="ES">Espirito Santo</option>
+                            <option <%= uf.equals("GO") ? "selected" : ""%>
+                                value="GO">Goiás</option>
+                            <option <%= uf.equals("MA") ? "selected" : ""%>
+                                value="MA">Maranhão</option>
+                            <option <%= uf.equals("MS") ? "selected" : ""%>
+                                value="MS">Mato Grosso do Sul</option>
+                            <option <%= uf.equals("MT") ? "selected" : ""%>
+                                value="MT">Mato Grosso</option>
+                            <option <%= uf.equals("MG") ? "selected" : ""%>
+                                value="MG">Minas Gerais</option>
+                            <option <%= uf.equals("PA") ? "selected" : ""%>
+                                value="PA">Pará</option>
+                            <option <%= uf.equals("PB") ? "selected" : ""%>
+                                value="PB">Paraíba</option>
+                            <option <%= uf.equals("PR") ? "selected" : ""%>
+                                value="PR">Paraná</option>
+                            <option <%= uf.equals("PE") ? "selected" : ""%>
+                                value="PE">Pernambuco</option>
+                            <option <%= uf.equals("PI") ? "selected" : ""%>
+                                value="PI">Piauí</option>
+                            <option <%= uf.equals("RJ") ? "selected" : ""%>
+                                value="RJ">Rio de Janeiro</option>
+                            <option <%= uf.equals("RN") ? "selected" : ""%> 
+                                value="RN">Rio Grande do Norte</option>
+                            <option <%= uf.equals("RS") ? "selected" : ""%> 
+                                value="RS">Rio Grande do Sul</option>
+                            <option <%= uf.equals("RO") ? "selected" : ""%> 
+                                value="RO">Rondônia</option>
+                            <option <%= uf.equals("RR") ? "selected" : ""%> 
+                                value="RR">Roraima</option>
+                            <option <%= uf.equals("SC") ? "selected" : ""%> 
+                                value="SC">Santa Catarina</option>
+                            <option <%= uf.equals("SP") ? "selected" : ""%> 
+                                value="SP">São Paulo</option>
+                            <option <%= uf.equals("SE") ? "selected" : ""%>
+                                value="SE">Sergipe</option>
+                            <option <%= uf.equals("TO") ? "selected" : ""%> 
+                                value="TO">Tocantins</option>
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Cidade">
+                                    <input type="text"  name="cidade" class="form-control" id="inlineFormInputGroup" placeholder="Cidade">
                                 </div>
                             </div>
                         </div>
@@ -180,10 +254,10 @@
 
                             <div class="row ">
 
-                                <div style="padding-right: 0;" class="col-1"> </div>
-                                <div style="padding-left: 0;" class="col-11">
+<!--                                <div style="padding-right: 0;" class="col-1"> </div>-->
+                                <div style="padding-left: 0;" class="col-12">
 
-                                    <textarea class="form-control" rows="7" cols="130">                               
+                                    <textarea name="descricao" class="txt form-control" rows="8" cols="130">                               
                                     </textarea>
 
                                 </div>
@@ -280,8 +354,8 @@
             jQuery(document).ready(function ($) {
                 
                 $("#txtDddTelefone").mask("(00) 00000-0000");
-
             });
+             
 
 
 

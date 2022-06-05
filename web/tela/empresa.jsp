@@ -16,8 +16,8 @@
         <title>Empresa</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="../css/bootstrap.css" >
-        <link rel="stylesheet" href="../css/estiloempresa.css" >
-        <link rel="stylesheet" href="../css/estiloindex.css" >
+        <link rel="stylesheet" href="../css/padrao/estiloempresa.css" >
+<!--        <link rel="stylesheet" href="../css/padrao/estiloindex.css" >-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     </head>
@@ -101,10 +101,10 @@
                     <img src="<%= caminho%>img/academia-piso-vinilico.jpg" width="100%" alt="imagem" />
                 </div>
                 <div class="col-4">
-                    <img src="<%= caminho%>img/academia_.jpg" width="100%" alt="imagem" />
+                    <img src="<%= caminho%>img/academia_.jpg" width="100%" height="98%" alt="imagem" />
                 </div>
                 <div class="col-4">
-                    <img src="<%= caminho%>img/academy.jpg" width="100%" alt="imagem" />
+                    <img src="<%= caminho%>img/academy.jpg" width="100%" height="98%" alt="imagem" />
                 </div>
             </div> 
 

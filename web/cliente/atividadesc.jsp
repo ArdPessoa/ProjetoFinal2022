@@ -19,7 +19,7 @@
         <title>ATIVIDADES</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="<%=caminho%>css/bootstrap.css" >
-        <link rel="stylesheet" href="<%=caminho%>css/estiloatividadecliente.css" >
+        <link rel="stylesheet" href="<%=caminho%>css/cliente/estiloatividadecliente.css" >
       
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">

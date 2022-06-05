@@ -16,7 +16,7 @@
         <title>Planos</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="../css/bootstrap.css" >
-        <link rel="stylesheet" href="../css/estiloindex.css" >
+        <link rel="stylesheet" href="../css/padrao/estiloplano.css" >
 
        
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
@@ -71,14 +71,14 @@
                 <div class="col-3"></div>
                 <div class="col-6">
                     <h2><center>Plano</center></h2>
-                    <center><p><h3>Planos e promoções imperdivéis!</h3><p/>
-                        <h5><p>Treine todos os dias em sua unidade sem taxa de cancelamento e sem taxa de anuidade.</h5>
+                    <h3>Planos e promoções imperdivéis!</h3>
+                        <p>Treine todos os dias em sua unidade sem taxa de cancelamento e sem taxa de anuidade.<br>
+                          
                         O cancelamento deve ser avisado com no mínimo 30 dias de antecedência do próximo vencimento.<br>
                         Plano Gold Sem Adesão válido somente no site.
-                        O acesso do (a) convidado (a) só é liberado na unidade de matrícula.
-                    
+                        O acesso do (a) convidado (a) só é liberado na unidade de matrícula.</p>
+                      
                   
-                    </center>
                     <p style="text-align: justify;">
                     <center><img src="<%= caminho%>img/planoeditado.png" alt="imagem"></center> 
                     </p> 

@@ -20,7 +20,7 @@
         <title>Fale Conosco</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="<%= caminho %>css/bootstrap.css" >
-        <link rel="stylesheet" href="<%= caminho %>css/estilofaleconoscocliente.css" >
+        <link rel="stylesheet" href="<%= caminho %>css/cliente/estilofaleconoscocliente.css" >
       
    
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 

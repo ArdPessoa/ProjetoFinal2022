@@ -15,7 +15,7 @@
 
     <head>
         <link  rel="stylesheet" href="<%= caminho%>css/bootstrap.css"/>
-        <link rel="stylesheet" href="<%= caminho%>css/estilologin.css" />
+        <link rel="stylesheet" href="<%= caminho%>css/padrao/estilologin.css" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>

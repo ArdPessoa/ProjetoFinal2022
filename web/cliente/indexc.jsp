@@ -25,7 +25,7 @@
         <title>HOME</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="<%= caminho%>css/bootstrap.css" >
-        <link rel="stylesheet" href="<%= caminho%>css/estiloindexcliente.css" >
+        <link rel="stylesheet" href="<%= caminho%>css/cliente/estiloindexcliente.css" >
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
               integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -104,7 +104,7 @@
                     <div class="img">
                         <img  class="D"  src="<%= caminho%>img/D.png"  alt="imagem-D" />
                         <div class="texto" >
-                            MODALIDADES APARTIR DE R$ 49,99     
+                            MODALIDADES APARTIR DE R$ 79,99     
                         </div>
                     </div>
                 </div>

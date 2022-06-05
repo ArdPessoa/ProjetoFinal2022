@@ -32,7 +32,7 @@
         <title>LISTAGEM GERAL</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="<%= caminho%>css/bootstrap.css" >
-        <link rel="stylesheet" href="<%= caminho%>css/estiloindex.css" >
+        <link rel="stylesheet" href="<%= caminho%>css/admin/estilolistaradmin.css" >
     </head>
     <body>
         <div>

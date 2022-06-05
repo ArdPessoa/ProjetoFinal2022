@@ -9,15 +9,18 @@ and open the template in the editor.
 */
 
 body{
-    font-family: "sans-serif";
-    color:black;
+    font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
+    color:white;
 }
 a{
     text-decoration: none;
     color: white;
 }
+a:hover{
+color: white;
+}
 a.nav-link{
-    margin-right:100px;
+    margin-right:190px;
    
 }
 .navbar-brand{
@@ -71,7 +74,7 @@ img.E{
     font-weight: bold;
     color:#333;
     text-align: center;
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
     font-size: 23px;
     margin-top: 280px;
     margin-left:  1430px;
@@ -82,18 +85,18 @@ img.E{
 .h2P {
     margin-top:760px; 
     color: white;
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
 }
 .table{
     background-color:	#808080; 
 }
 .h2In{
     color: white; 
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
 }
 .p{
     color: white; 
-    font-family: "time new romam";
+/*    font-family: "time new romam";*/
     text-align: center; 
 }
 .btn{

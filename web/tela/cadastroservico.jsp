@@ -51,8 +51,8 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="<%= dir%>css/bootstrap.css" >
-        <link rel="stylesheet" href="../css/estilotelacadastro.css" >
-        <link rel="stylesheet" href="../css/estiloindex.css" >
+        <link rel="stylesheet" href="../css/padrao/estilotelaservico.css" >
+        <link rel="stylesheet" href="../css/padrao/estiloindex.css" >
 
     </head>
     <body>

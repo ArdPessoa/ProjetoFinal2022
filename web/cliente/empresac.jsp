@@ -19,7 +19,7 @@
         <title>Empresa</title>
         <!--Bootsrap 4 CDN-->
         <link rel="stylesheet" href="../css/bootstrap.css" >
-        <link rel="stylesheet" href="../css/estiloempresacliente.css" >
+        <link rel="stylesheet" href="../css/cliente/estiloempresacliente.css" >
 
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 

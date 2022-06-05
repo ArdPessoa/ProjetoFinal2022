@@ -2,22 +2,22 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
-
- 
+*/
+/* 
     Created on : 05/04/2022, 11:05:43
     Author     : sala306b
+*/
 
-
- Made with love by Mutiullah Samim
+/* Made with love by Mutiullah Samim*/
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-image: url('https://wallpaperaccess.com/full/1097431.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    font-family: 'Numans', sans-serif;
+    font-family: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -109,26 +109,7 @@ h11 {
 
 .panel-heading{
     font-size:150%;
-}*/
-  body{
-            font-family: "sans-serif";
-            color:white;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        a.nav-link{
-            margin-right: 100px;
-
-        }
-        .navbar-brand{
-            padding-right:  50px;
-        }
-        
-        .img{
-            padding-right: 10px;
-
-
-        }
-
+}
+#text{
+    color: white;
+}
