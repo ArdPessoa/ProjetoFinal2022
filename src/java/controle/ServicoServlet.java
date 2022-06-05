@@ -66,7 +66,7 @@ public class ServicoServlet extends HttpServlet {
 //                response.sendRedirect("tela/loginmain.jsp?auth=false");
 //            }
 //        } if (request.getParameter("acao").equals("editar")) {;
-        if (request.getParameter("acao").equals("editar")) {;
+        if (request.getParameter("acao").equals("editar")) {
             long idservico = Long.parseLong(request.getParameter("idservico"));
             String modalidade = request.getParameter("modalidade");
             double preco = Double.parseDouble(request.getParameter("preco"));

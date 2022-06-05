@@ -163,7 +163,7 @@ public class FaleConosco {
         try {
 
             Connection conn = BancoDados.getConexao();
-            String sql = "INSERT INTO bdacademia.tb_faleconosco";
+            String sql = "INSERT INTO tb_faleconosco";
             sql += "(nome, email, ddd,"
                     + "telefone, uf, cidade,"
                     + "descricao)";

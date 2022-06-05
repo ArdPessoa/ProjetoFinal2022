@@ -13,18 +13,21 @@ body{
     color:white;
 }
 a{
-    text-decoration: none;
-    color: white;
+    text-decoration: none; 
+    color: white; 
 }
+
 a.nav-link{
       margin-right:190px;
-
+      
+      
 }
 .navbar-brand{
     margin-right: 105px;
     padding-right:  80px;
     padding-left:  130px;
 }
+
 
 h2.fc {
     margin-top:100px; 
